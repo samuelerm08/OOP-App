@@ -36,14 +36,9 @@ namespace OOP_C2.Posts
 
         public void ModificarPost(int id, Post post)
         {
-            int index = posts.FindIndex(post => post.ID == id);
+            int index = posts.FindIndex(post => post.ID == id);           
 
-            if (index > posts.Count())
-            {
-                Console.WriteLine("ID inexistente");
-            }
-
-            else
+            if (index <= posts.Count())
             {
                 posts[index].Titulo = post.Titulo;
                 posts[index].Contenido = post.Contenido;
